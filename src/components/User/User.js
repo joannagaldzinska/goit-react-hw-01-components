@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
-import defaultUserImage from './default-user-image.png'
+import defaultUserImage from './default-user-image.png';
+import "./User.module.css";
 
 export default function Users(props) {
     const { name, tag, location = 'not found', avatar = defaultUserImage, followers, likes, views} = props;
