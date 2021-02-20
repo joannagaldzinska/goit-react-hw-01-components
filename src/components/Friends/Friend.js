@@ -1,20 +1,23 @@
 import PropTypes from 'prop-types';
 import defaultUserImage from '../User/default-user-image.png'
+import s from "./Friends.module.css";
 
-export default function Friends(props) {
-    const {isOnline, name , avatar = defaultUserImage} = props;
+export default function Friend(props) {
+    const {id, isOnline, name , avatar = defaultUserImage} = props;
 
     return (
-    <li className="item">
-        <span className="status">{isOnline}</span>
-        <img className="avatar" src={avatar} alt={name} width="48" />
-        <p className="name">{name}</p>
+        
+    <li className={s.item}  key={id}>
+        <span className={isOnline ? s.online : s.offline}>{isOnline}</span>
+        <img className={s.avatar} src={avatar} alt={name} width="48" />
+        <p className={s.name}>{name}</p>
     </li>
     )
 }
 
-Friends.propTypes = {
+Friend.propTypes = {
     name: PropTypes.string,
     avatar: PropTypes.string,
-    status: PropTypes.bool.isRequired,
+    isOnline: PropTypes.bool.isRequired,
+    id: PropTypes.number.isRequired,
 }

@@ -1,0 +1,24 @@
+.section {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+}
+
+.title {
+  text-transform: uppercase;
+}
+
+.list {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.item {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}

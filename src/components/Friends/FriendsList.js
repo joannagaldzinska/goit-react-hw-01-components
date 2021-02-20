@@ -1,16 +1,16 @@
 import Friend from "./Friend";
+import s from "./Friends.module.css";
 
 export default function FriendsList(props) {
     const {friends} = props;
     return(
-        <ul>
+        <ul className={s.list}>
             {friends.map(friend => (
-                <li key={friend.id}>
                     <Friend
+                    key={friend.id}
                     name={friend.name}
                     avatar={friend.avatar}
                     isOnline={friend.isOnline} />
-                </li>
             ))}
         </ul>
     )
