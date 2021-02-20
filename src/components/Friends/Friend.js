@@ -19,5 +19,4 @@ Friend.propTypes = {
     name: PropTypes.string,
     avatar: PropTypes.string,
     isOnline: PropTypes.bool.isRequired,
-    id: PropTypes.number.isRequired,
 }
